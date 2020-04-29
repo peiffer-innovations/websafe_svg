@@ -14,17 +14,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Install dependencies
-      run: flutter packages get
-    - name: Flutter Analyzer
-      run: dartanalyzer lib
-    - name: Code Format
-      run: dartfmt --set-exit-if-changed -w lib test
-    - name: Run tests
-      run: flutter test
     - name: Publish
       uses: sakebook/actions-flutter-pub-publisher@v1.2.1
       with:
         credential: ${{ secrets.CREDENTIAL_JSON }}
-        flutter_package: false
-        skip_test: true
+        flutter_package: true
+        skip_test: false

@@ -1,6 +1,6 @@
 name: websafe_svg
 description: Simple abstraction to be able to use SVGs in Android, iOS, and Web.
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/peiffer-innovations/websafe_svg
 environment:
   sdk: ">=2.5.0 <3.0.0"

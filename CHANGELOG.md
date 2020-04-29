@@ -1,3 +1,8 @@
+## [1.0.3] - April 28th, 2020
+
+* Version bump to test fixed GH Action
+
+
 ## [1.0.2] - April 28th, 2020
 
 * Swapped the hard coded color replacement with a RegEx to be more versatile
