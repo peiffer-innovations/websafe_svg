@@ -1,6 +1,6 @@
 name: websafe_svg
-description: Simple abstraction to be able to detect Web, Android, and iOS without a hard reference to `dart:io`
-version: 1.0.1
+description: Simple abstraction to be able to use SVGs in Android, iOS, and Web.
+version: 1.0.2
 homepage: https://github.com/peiffer-innovations/websafe_svg
 environment:
   sdk: ">=2.5.0 <3.0.0"

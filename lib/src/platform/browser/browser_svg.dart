@@ -79,10 +79,12 @@ class _BrowserSvgState extends State<BrowserSvg> {
 
         hexValue = '#$hexValue';
 
-        image = image.replaceAll('"#ffffff"', '"$hexValue"');
-        image = image.replaceAll('"#FFFFFF"', '"$hexValue"');
-        image = image.replaceAll('"#fff"', '"$hexValue"');
-        image = image.replaceAll('"#FFF"', '"$hexValue"');
+        image = image.replaceAllMapped(
+            RegExp(
+              r'"#([0-9A-F]{6}|[0-9A-F]{3})"',
+              caseSensitive: false,
+            ),
+            (match) => '"$hexValue"');
       }
 
       var b64 = base64.encode(utf8.encode(image));

@@ -4,16 +4,7 @@
 
 A Flutter compatible library to handle SVGs for Android, iOS, and Web.
 
-The `color` attribute assumes that the SVG is white on Web.  It will look for
-and replace the four following strings to attempt to set the color:
-
-* `"#FFFFFF"`
-* `"#ffffff"`
-* `"#FFF"`
-* `"#fff"`
-
-If the SVG does not include one of those strings then the `color` option will be
-a no-op and the SVG will use whatever color is set.
+The `color` attribute will replace all HTML / Hex based color values in the SVG with the given color.
 
 ## Using the library
 
