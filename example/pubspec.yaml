@@ -1,0 +1,21 @@
+name: websafe_svg_example
+description: Example for the Websafe SVG
+version: 1.0.0
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  websafe_svg:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  assets:
+    - assets/all.json
+    - assets/svgs/
