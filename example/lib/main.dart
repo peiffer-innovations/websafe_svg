@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:websafe_svg_example/src/animation_page.dart';
 
 import 'src/asset_svg_page.dart';
 import 'src/memory_svg_page.dart';
+import 'src/network_svg_page.dart';
+import 'src/string_svg_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -35,6 +38,14 @@ class MyHomePage extends StatelessWidget {
           ListTile(
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(
+                builder: (BuildContext context) => AnimationPage(),
+              ),
+            ),
+            title: Text('Animation'),
+          ),
+          ListTile(
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
                 builder: (BuildContext context) => AssetSvgPage(),
               ),
             ),
@@ -47,6 +58,22 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             title: Text('Memory'),
+          ),
+          ListTile(
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (BuildContext context) => NetworkSvgPage(),
+              ),
+            ),
+            title: Text('Network'),
+          ),
+          ListTile(
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (BuildContext context) => StringSvgPage(),
+              ),
+            ),
+            title: Text('String'),
           ),
         ],
       ),

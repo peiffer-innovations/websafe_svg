@@ -5,17 +5,17 @@ import 'package:flutter/services.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 import 'package:websafe_svg_example/src/svg_page.dart';
 
-class AssetSvgPage extends StatefulWidget {
-  AssetSvgPage({
+class StringSvgPage extends StatefulWidget {
+  StringSvgPage({
     Key key,
   }) : super(key: key);
 
   @override
-  _AssetSvgPageState createState() => _AssetSvgPageState();
+  _StringSvgPageState createState() => _StringSvgPageState();
 }
 
-class _AssetSvgPageState extends State<AssetSvgPage> {
-  List<String> _svgs;
+class _StringSvgPageState extends State<StringSvgPage> {
+  List<_SvgImage> _svgs;
 
   @override
   void initState() {
@@ -28,9 +28,14 @@ class _AssetSvgPageState extends State<AssetSvgPage> {
     var data = await rootBundle.loadString('assets/all.json');
     var all = json.decode(data);
 
-    var svgs = <String>[];
+    var svgs = <_SvgImage>[];
     for (var i in all) {
-      svgs.add(i?.toString());
+      svgs.add(
+        _SvgImage(
+          image: await rootBundle.loadString('assets/svgs/$i'),
+          name: i?.toString(),
+        ),
+      );
     }
     _svgs = svgs;
 
@@ -43,7 +48,7 @@ class _AssetSvgPageState extends State<AssetSvgPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Assets'),
+        title: Text('String'),
       ),
       body: _svgs == null
           ? Center(
@@ -66,8 +71,8 @@ class _AssetSvgPageState extends State<AssetSvgPage> {
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (BuildContext context) => SvgPage(
-                              child: WebsafeSvg.asset(
-                                'assets/svgs/${_svgs[index]}',
+                              child: WebsafeSvg.string(
+                                _svgs[index].image,
                                 fit: BoxFit.contain,
                                 height: 30.0,
                                 width: 30.0,
@@ -75,8 +80,8 @@ class _AssetSvgPageState extends State<AssetSvgPage> {
                             ),
                           ),
                         ),
-                        child: WebsafeSvg.asset(
-                          'assets/svgs/${_svgs[index]}',
+                        child: WebsafeSvg.string(
+                          _svgs[index].image,
                           color: Colors.white,
                           fit: BoxFit.contain,
                           height: 30.0,
@@ -85,10 +90,21 @@ class _AssetSvgPageState extends State<AssetSvgPage> {
                       ),
                     ),
                   ),
-                  title: Text(_svgs[index]),
+                  title: Text(_svgs[index].name),
                 ),
               ),
             ),
     );
   }
+}
+
+@immutable
+class _SvgImage {
+  _SvgImage({
+    @required this.image,
+    @required this.name,
+  });
+
+  final String image;
+  final String name;
 }

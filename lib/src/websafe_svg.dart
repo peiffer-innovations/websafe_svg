@@ -54,6 +54,29 @@ class WebsafeSvg {
         width: width,
       );
 
+  static Widget network(
+    String url, {
+    alignment = Alignment.center,
+    Color color,
+    BoxFit fit = BoxFit.contain,
+    Map<String, String> headers,
+    double height,
+    WidgetBuilder placeholderBuilder,
+    String semanticsLabel,
+    double width,
+  }) =>
+      svgFromNetwork(
+        url,
+        alignment: alignment,
+        color: color,
+        fit: fit,
+        headers: headers,
+        height: height,
+        placeholderBuilder: placeholderBuilder,
+        semanticsLabel: semanticsLabel,
+        width: width,
+      );
+
   static Widget string(
     String bytes, {
     alignment = Alignment.center,

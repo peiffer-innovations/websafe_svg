@@ -4,7 +4,7 @@
 
 A Flutter compatible library to handle SVGs for Android, iOS, and Web.
 
-The `color` attribute will replace all HTML / Hex based color values in the SVG with the given color.
+The `color` attribute currently only works on Flutter `1.19.0-1.0.pre` or higher.  At time of release, this was available in the `dev` channel.
 
 ## Using the library
 

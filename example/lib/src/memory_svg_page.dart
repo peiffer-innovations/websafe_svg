@@ -4,6 +4,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:websafe_svg/websafe_svg.dart';
+import 'package:websafe_svg_example/src/svg_page.dart';
 
 class MemorySvgPage extends StatefulWidget {
   MemorySvgPage({
@@ -69,10 +70,26 @@ class _MemorySvgPageState extends State<MemorySvgPage> {
                       alignment: Alignment.center,
                       height: 60.0,
                       width: 60.0,
-                      child: WebsafeSvg.memory(
-                        _svgs[index].image,
-                        height: 40.0,
-                        width: 40.0,
+                      child: InkWell(
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => SvgPage(
+                              child: WebsafeSvg.memory(
+                                _svgs[index].image,
+                                fit: BoxFit.contain,
+                                height: 30.0,
+                                width: 30.0,
+                              ),
+                            ),
+                          ),
+                        ),
+                        child: WebsafeSvg.memory(
+                          _svgs[index].image,
+                          color: Colors.white,
+                          fit: BoxFit.contain,
+                          height: 30.0,
+                          width: 30.0,
+                        ),
                       ),
                     ),
                   ),

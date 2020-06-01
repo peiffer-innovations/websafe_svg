@@ -1,3 +1,9 @@
+## [1.1.0] - June 1st, 2020
+
+* Switched from `HtmlElementView` to `Image.network`
+* Added an example app
+
+
 ## [1.0.3] - April 28th, 2020
 
 * Version bump to test fixed GH Action

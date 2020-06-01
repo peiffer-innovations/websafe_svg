@@ -5,16 +5,16 @@ import 'package:flutter/services.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 import 'package:websafe_svg_example/src/svg_page.dart';
 
-class AssetSvgPage extends StatefulWidget {
-  AssetSvgPage({
+class NetworkSvgPage extends StatefulWidget {
+  NetworkSvgPage({
     Key key,
   }) : super(key: key);
 
   @override
-  _AssetSvgPageState createState() => _AssetSvgPageState();
+  _NetworkSvgPageState createState() => _NetworkSvgPageState();
 }
 
-class _AssetSvgPageState extends State<AssetSvgPage> {
+class _NetworkSvgPageState extends State<NetworkSvgPage> {
   List<String> _svgs;
 
   @override
@@ -43,7 +43,7 @@ class _AssetSvgPageState extends State<AssetSvgPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Assets'),
+        title: Text('Network'),
       ),
       body: _svgs == null
           ? Center(
@@ -66,8 +66,8 @@ class _AssetSvgPageState extends State<AssetSvgPage> {
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (BuildContext context) => SvgPage(
-                              child: WebsafeSvg.asset(
-                                'assets/svgs/${_svgs[index]}',
+                              child: WebsafeSvg.network(
+                                'https://raw.githubusercontent.com/peiffer-innovations/websafe_svg/master/example/assets-src/svgs/${_svgs[index]}',
                                 fit: BoxFit.contain,
                                 height: 30.0,
                                 width: 30.0,
@@ -75,8 +75,8 @@ class _AssetSvgPageState extends State<AssetSvgPage> {
                             ),
                           ),
                         ),
-                        child: WebsafeSvg.asset(
-                          'assets/svgs/${_svgs[index]}',
+                        child: WebsafeSvg.network(
+                          'https://raw.githubusercontent.com/peiffer-innovations/websafe_svg/master/example/assets-src/svgs/${_svgs[index]}',
                           color: Colors.white,
                           fit: BoxFit.contain,
                           height: 30.0,
