@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:convert/convert.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
