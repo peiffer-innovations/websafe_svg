@@ -67,7 +67,7 @@ class _NetworkSvgPageState extends State<NetworkSvgPage> {
                           MaterialPageRoute(
                             builder: (BuildContext context) => SvgPage(
                               child: WebsafeSvg.network(
-                                'https://raw.githubusercontent.com/peiffer-innovations/websafe_svg/master/example/assets-src/svgs/${_svgs[index]}',
+                                'https://raw.githubusercontent.com/peiffer-innovations/websafe_svg/main/example/assets-src/svgs/${_svgs[index]}',
                                 fit: BoxFit.contain,
                                 height: 30.0,
                                 width: 30.0,
@@ -76,7 +76,7 @@ class _NetworkSvgPageState extends State<NetworkSvgPage> {
                           ),
                         ),
                         child: WebsafeSvg.network(
-                          'https://raw.githubusercontent.com/peiffer-innovations/websafe_svg/master/example/assets-src/svgs/${_svgs[index]}',
+                          'https://raw.githubusercontent.com/peiffer-innovations/websafe_svg/main/example/assets-src/svgs/${_svgs[index]}',
                           color: Colors.white,
                           fit: BoxFit.contain,
                           height: 30.0,
