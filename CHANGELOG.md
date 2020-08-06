@@ -1,3 +1,8 @@
+## [1.1.1] - August 5th, 2020
+
+* Updated `flutter_svg` dependency to support `1.20.0`
+
+
 ## [1.1.0] - June 1st, 2020
 
 * Switched from `HtmlElementView` to `Image.network`
