@@ -1,3 +1,8 @@
+## [1.1.2] - August 22nd, 2020
+
+* Update dependencies and GitHub metadata
+
+
 ## [1.1.1] - August 5th, 2020
 
 * Updated `flutter_svg` dependency to support `1.20.0`
