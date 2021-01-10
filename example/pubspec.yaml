@@ -2,6 +2,8 @@ name: websafe_svg_example
 description: Example for the Websafe SVG
 version: 1.0.0
 
+publish_to: none
+
 environment:
   sdk: ">=2.7.0 <3.0.0"
 

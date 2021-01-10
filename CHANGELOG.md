@@ -1,3 +1,8 @@
+## [1.1.4+1] - January 10th, 2021
+
+* Dependency updates.
+
+
 ## [1.1.4] - August 22nd, 2020
 
 * Rolling back to meta 1.1.8 due to `flutter_test` incompatiblities
