@@ -1,3 +1,8 @@
+## [1.1.4+2] - February, 2021
+
+* Dependency updates.
+
+
 ## [1.1.4+1] - January 10th, 2021
 
 * Dependency updates.
