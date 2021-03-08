@@ -4,8 +4,8 @@ import 'package:websafe_svg/src/platform/browser/browser_svg_loader.dart';
 @immutable
 class BrowserSvgStringLoader implements BrowserSvgLoader {
   BrowserSvgStringLoader({
-    @required this.string,
-  }) : assert(string?.isNotEmpty == true);
+    required this.string,
+  });
 
   final String string;
 

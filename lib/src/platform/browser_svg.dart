@@ -10,15 +10,15 @@ import 'package:websafe_svg/src/platform/browser/browser_svg_string_loader.dart'
 Widget svgFromAsset(
   String asset, {
   alignment = Alignment.center,
-  Color color,
+  Color? color,
   bool excludeFromSemantics = false,
   BoxFit fit = BoxFit.contain,
-  double height,
-  Key key,
-  String package,
-  WidgetBuilder placeholderBuilder,
-  String semanticsLabel,
-  double width,
+  double? height,
+  Key? key,
+  String? package,
+  WidgetBuilder? placeholderBuilder,
+  String? semanticsLabel,
+  double? width,
 }) =>
     BrowserSvg(
       alignment: alignment,
@@ -39,14 +39,14 @@ Widget svgFromAsset(
 Widget svgFromMemory(
   Uint8List bytes, {
   alignment = Alignment.center,
-  Color color,
+  Color? color,
   bool excludeFromSemantics = false,
   BoxFit fit = BoxFit.contain,
-  double height,
-  Key key,
-  WidgetBuilder placeholderBuilder,
-  String semanticsLabel,
-  double width,
+  double? height,
+  Key? key,
+  WidgetBuilder? placeholderBuilder,
+  String? semanticsLabel,
+  double? width,
 }) =>
     BrowserSvg(
       alignment: alignment,
@@ -64,15 +64,15 @@ Widget svgFromMemory(
 Widget svgFromNetwork(
   String url, {
   alignment = Alignment.center,
-  Color color,
+  Color? color,
   bool excludeFromSemantics = false,
   BoxFit fit = BoxFit.contain,
-  double height,
-  Map<String, String> headers,
-  Key key,
-  WidgetBuilder placeholderBuilder,
-  String semanticsLabel,
-  double width,
+  double? height,
+  Map<String, String>? headers,
+  Key? key,
+  WidgetBuilder? placeholderBuilder,
+  String? semanticsLabel,
+  double? width,
 }) =>
     BrowserSvg(
       alignment: alignment,
@@ -93,14 +93,14 @@ Widget svgFromNetwork(
 Widget svgFromString(
   String string, {
   alignment = Alignment.center,
-  Color color,
+  Color? color,
   bool excludeFromSemantics = false,
   BoxFit fit = BoxFit.contain,
-  double height,
-  Key key,
-  WidgetBuilder placeholderBuilder,
-  String semanticsLabel,
-  double width,
+  double? height,
+  Key? key,
+  WidgetBuilder? placeholderBuilder,
+  String? semanticsLabel,
+  double? width,
 }) =>
     BrowserSvg(
       alignment: alignment,

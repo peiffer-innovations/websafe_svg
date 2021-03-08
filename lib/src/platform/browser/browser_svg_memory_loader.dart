@@ -7,8 +7,8 @@ import 'package:websafe_svg/src/platform/browser/browser_svg_loader.dart';
 @immutable
 class BrowserSvgMemoryLoader implements BrowserSvgLoader {
   BrowserSvgMemoryLoader({
-    @required this.bytes,
-  }) : assert(bytes?.isNotEmpty == true);
+    required this.bytes,
+  });
 
   final Uint8List bytes;
 

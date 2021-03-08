@@ -7,28 +7,27 @@ import 'package:websafe_svg/src/platform/browser/browser_svg_loader.dart';
 
 class BrowserSvg extends StatefulWidget {
   BrowserSvg({
-    @required this.alignment,
+    required this.alignment,
     this.color,
-    @required this.excludeFromSemantics,
-    @required this.fit,
-    @required this.height,
-    Key key,
-    @required this.loader,
-    @required this.placeholderBuilder,
-    @required this.semanticsLabel,
-    @required this.width,
-  })  : assert(loader != null),
-        super(key: key);
+    required this.excludeFromSemantics,
+    required this.fit,
+    required this.height,
+    Key? key,
+    required this.loader,
+    required this.placeholderBuilder,
+    required this.semanticsLabel,
+    required this.width,
+  }) : super(key: key);
 
   final Alignment alignment;
-  final Color color;
+  final Color? color;
   final bool excludeFromSemantics;
   final BoxFit fit;
-  final double height;
+  final double? height;
   final BrowserSvgLoader loader;
-  final WidgetBuilder placeholderBuilder;
-  final String semanticsLabel;
-  final double width;
+  final WidgetBuilder? placeholderBuilder;
+  final String? semanticsLabel;
+  final double? width;
 
   @override
   _BrowserSvgState createState() => _BrowserSvgState();
@@ -38,8 +37,8 @@ class _BrowserSvgState extends State<BrowserSvg> {
   static final Logger _logger = Logger('_BrowserSvgState');
 
   int _loadIndex = 0;
-  String _image;
-  BrowserSvgLoader _loader;
+  String? _image;
+  late BrowserSvgLoader _loader;
 
   @override
   void initState() {
@@ -53,7 +52,7 @@ class _BrowserSvgState extends State<BrowserSvg> {
   void didUpdateWidget(BrowserSvg oldWidget) {
     super.didUpdateWidget(oldWidget);
 
-    if (widget.loader != oldWidget?.loader) {
+    if (widget.loader != oldWidget.loader) {
       _loader = widget.loader;
       _loadImage();
     }
@@ -87,7 +86,7 @@ class _BrowserSvgState extends State<BrowserSvg> {
   Widget _buildPlaceholder(BuildContext context) =>
       widget.placeholderBuilder == null
           ? SizedBox()
-          : Builder(builder: widget.placeholderBuilder);
+          : Builder(builder: widget.placeholderBuilder!);
 
   @override
   Widget build(BuildContext context) {
@@ -100,7 +99,7 @@ class _BrowserSvgState extends State<BrowserSvg> {
               width: widget.width,
               alignment: Alignment.center,
               child: Image.network(
-                _image,
+                _image!,
                 color: widget.color,
                 height: widget.height,
                 fit: widget.fit,
