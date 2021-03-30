@@ -6,15 +6,15 @@ import 'package:flutter_svg/svg.dart';
 Widget svgFromAsset(
   String asset, {
   alignment = Alignment.center,
-  Color color,
+  Color? color,
   bool excludeFromSemantics = false,
   BoxFit fit = BoxFit.contain,
-  double height,
-  Key key,
-  String package,
-  WidgetBuilder placeholderBuilder,
-  String semanticsLabel,
-  double width,
+  double? height,
+  Key? key,
+  String? package,
+  WidgetBuilder? placeholderBuilder,
+  String? semanticsLabel,
+  double? width,
 }) =>
     SvgPicture.asset(
       asset,
@@ -32,14 +32,14 @@ Widget svgFromAsset(
 Widget svgFromMemory(
   Uint8List bytes, {
   alignment = Alignment.center,
-  Color color,
+  Color? color,
   bool excludeFromSemantics = false,
   BoxFit fit = BoxFit.contain,
-  double height,
-  Key key,
-  WidgetBuilder placeholderBuilder,
-  String semanticsLabel,
-  double width,
+  double? height,
+  Key? key,
+  WidgetBuilder? placeholderBuilder,
+  String? semanticsLabel,
+  double? width,
 }) =>
     SvgPicture.memory(
       bytes,
@@ -57,15 +57,15 @@ Widget svgFromMemory(
 Widget svgFromNetwork(
   String url, {
   alignment = Alignment.center,
-  Color color,
+  Color? color,
   bool excludeFromSemantics = false,
   BoxFit fit = BoxFit.contain,
-  Map<String, String> headers,
-  double height,
-  Key key,
-  WidgetBuilder placeholderBuilder,
-  String semanticsLabel,
-  double width,
+  Map<String, String>? headers,
+  double? height,
+  Key? key,
+  WidgetBuilder? placeholderBuilder,
+  String? semanticsLabel,
+  double? width,
 }) =>
     SvgPicture.network(
       url,
@@ -84,14 +84,14 @@ Widget svgFromNetwork(
 Widget svgFromString(
   String bytes, {
   alignment = Alignment.center,
-  Color color,
+  Color? color,
   bool excludeFromSemantics = false,
   BoxFit fit = BoxFit.contain,
-  double height,
-  Key key,
-  WidgetBuilder placeholderBuilder,
-  String semanticsLabel,
-  double width,
+  double? height,
+  Key? key,
+  WidgetBuilder? placeholderBuilder,
+  String? semanticsLabel,
+  double? width,
 }) =>
     SvgPicture.string(
       bytes,

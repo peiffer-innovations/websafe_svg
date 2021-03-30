@@ -8,10 +8,10 @@ import 'package:websafe_svg/src/platform/browser/browser_svg_loader.dart';
 class BrowserSvgNetworkLoader implements BrowserSvgLoader {
   BrowserSvgNetworkLoader({
     this.headers,
-    @required this.url,
-  }) : assert(url?.isNotEmpty == true);
+    required this.url,
+  });
 
-  final Map<String, String> headers;
+  final Map<String, String>? headers;
   final String url;
 
   @override
@@ -25,7 +25,7 @@ class BrowserSvgNetworkLoader implements BrowserSvgLoader {
 
   @override
   Future<String> load() async {
-    var response = await http.get(url, headers: headers);
+    var response = await http.get(Uri.parse(url), headers: headers);
 
     return utf8.decode(response.bodyBytes);
   }

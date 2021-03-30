@@ -13,13 +13,13 @@ class WebsafeSvg {
   static Widget asset(
     String asset, {
     alignment = Alignment.center,
-    Color color,
+    Color? color,
     BoxFit fit = BoxFit.contain,
-    double height,
-    String package,
-    WidgetBuilder placeholderBuilder,
-    String semanticsLabel,
-    double width,
+    double? height,
+    String? package,
+    WidgetBuilder? placeholderBuilder,
+    String? semanticsLabel,
+    double? width,
   }) =>
       svgFromAsset(
         asset,
@@ -36,12 +36,12 @@ class WebsafeSvg {
   static Widget memory(
     Uint8List bytes, {
     alignment = Alignment.center,
-    Color color,
+    Color? color,
     BoxFit fit = BoxFit.contain,
-    double height,
-    WidgetBuilder placeholderBuilder,
-    String semanticsLabel,
-    double width,
+    double? height,
+    WidgetBuilder? placeholderBuilder,
+    String? semanticsLabel,
+    double? width,
   }) =>
       svgFromMemory(
         bytes,
@@ -57,13 +57,13 @@ class WebsafeSvg {
   static Widget network(
     String url, {
     alignment = Alignment.center,
-    Color color,
+    Color? color,
     BoxFit fit = BoxFit.contain,
-    Map<String, String> headers,
-    double height,
-    WidgetBuilder placeholderBuilder,
-    String semanticsLabel,
-    double width,
+    Map<String, String>? headers,
+    double? height,
+    WidgetBuilder? placeholderBuilder,
+    String? semanticsLabel,
+    double? width,
   }) =>
       svgFromNetwork(
         url,
@@ -80,12 +80,12 @@ class WebsafeSvg {
   static Widget string(
     String bytes, {
     alignment = Alignment.center,
-    Color color,
+    Color? color,
     BoxFit fit = BoxFit.contain,
-    double height,
-    WidgetBuilder placeholderBuilder,
-    String semanticsLabel,
-    double width,
+    double? height,
+    WidgetBuilder? placeholderBuilder,
+    String? semanticsLabel,
+    double? width,
   }) =>
       svgFromString(
         bytes,
