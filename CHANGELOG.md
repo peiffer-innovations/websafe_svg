@@ -1,4 +1,4 @@
-## [2.0.0] - March 29th, 2021
+## [2.0.0-nullsafety.0] - March 29th, 2021
 
 * Null Safety
 * Fix for CanvasKit Web mode in Flutter 2
