@@ -1,7 +1,10 @@
 import 'dart:convert';
+import 'dart:js' as js;
+import 'dart:typed_data';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:logging/logging.dart';
 import 'package:websafe_svg/src/platform/browser/browser_svg_loader.dart';
 
@@ -38,7 +41,10 @@ class _BrowserSvgState extends State<BrowserSvg> {
 
   int _loadIndex = 0;
   String? _image;
+  Uint8List? _imageBytes;
   late BrowserSvgLoader _loader;
+
+  bool get rendererCanvasKit => js.context['flutterCanvasKit'] != null;
 
   @override
   void initState() {
@@ -69,7 +75,8 @@ class _BrowserSvgState extends State<BrowserSvg> {
       var image = await _loader.load();
 
       if (idx == _loadIndex) {
-        var b64 = base64.encode(utf8.encode(image));
+        _imageBytes = Uint8List.fromList(utf8.encode(image));
+        var b64 = base64.encode(_imageBytes!.toList());
         image = 'data:image/svg+xml;base64,$b64';
 
         _image = image;
@@ -94,18 +101,26 @@ class _BrowserSvgState extends State<BrowserSvg> {
       duration: Duration(milliseconds: 100),
       child: _image == null
           ? _buildPlaceholder(context)
-          : Container(
-              height: widget.height,
-              width: widget.width,
-              alignment: Alignment.center,
-              child: Image.network(
-                _image!,
-                color: widget.color,
-                height: widget.height,
-                fit: widget.fit,
-                width: widget.width,
-              ),
-            ),
+          : rendererCanvasKit
+              ? SvgPicture.memory(
+                  _imageBytes!,
+                  color: widget.color,
+                  height: widget.height,
+                  fit: widget.fit,
+                  width: widget.width,
+                )
+              : Container(
+                  height: widget.height,
+                  width: widget.width,
+                  alignment: Alignment.center,
+                  child: Image.network(
+                    _image!,
+                    color: widget.color,
+                    height: widget.height,
+                    fit: widget.fit,
+                    width: widget.width,
+                  ),
+                ),
     );
   }
 }

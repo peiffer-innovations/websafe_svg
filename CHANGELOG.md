@@ -1,4 +1,10 @@
-## [1.1.4+2] - February, 2021
+## [2.0.0] - March 29th, 2021
+
+* Null Safety
+* Fix for CanvasKit Web mode in Flutter 2
+
+
+## [1.1.4+2] - February 4th, 2021
 
 * Dependency updates.
 
