@@ -1,3 +1,8 @@
+## [2.0.0+1] - September 19th, 2021
+
+* Dependency updates
+
+
 ## [2.0.0] - April 11th, 2021
 
 * Proper release now that `flutter_svg` has released Null Safety in the stable channel.
