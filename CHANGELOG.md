@@ -1,3 +1,8 @@
+## [2.0.0+2] - November 14th, 2021
+
+* Dependency updates
+
+
 ## [2.0.0+1] - September 19th, 2021
 
 * Dependency updates

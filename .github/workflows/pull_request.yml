@@ -8,12 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    container:
-      image: google/dart:latest
-
     steps:
       - uses: actions/checkout@v2
       - name: Validate
-        uses: peiffer-innovations/actions-flutter-validate@v1.0.2
+        uses: peiffer-innovations/actions-flutter-validate@v1.1.1
         with:
           flutter_package: true
