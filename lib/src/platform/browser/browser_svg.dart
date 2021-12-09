@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'dart:js' as js;
 import 'dart:typed_data';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:logging/logging.dart';
