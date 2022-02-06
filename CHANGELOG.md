@@ -1,6 +1,7 @@
-## [2.1.0+2] - February 6th, 2022
+## [2.1.1] - February 6th, 2022
 
 * Dependency updates
+* Fixed Android example to be on v2
 
 
 ## [2.1.0] - January 3rd, 2022
