@@ -83,7 +83,7 @@ Widget svgFromNetwork(
 
 Widget svgFromString(
   String bytes, {
-  Alignment alignment =  Alignment.center,
+  Alignment alignment = Alignment.center,
   Color? color,
   bool excludeFromSemantics = false,
   BoxFit fit = BoxFit.contain,
