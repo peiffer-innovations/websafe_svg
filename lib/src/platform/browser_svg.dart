@@ -9,7 +9,7 @@ import 'package:websafe_svg/src/platform/browser/browser_svg_string_loader.dart'
 
 Widget svgFromAsset(
   String asset, {
-  alignment = Alignment.center,
+  Alignment alignment =  Alignment.center,
   Color? color,
   bool excludeFromSemantics = false,
   BoxFit fit = BoxFit.contain,
@@ -38,7 +38,7 @@ Widget svgFromAsset(
 
 Widget svgFromMemory(
   Uint8List bytes, {
-  alignment = Alignment.center,
+  Alignment alignment =  Alignment.center,
   Color? color,
   bool excludeFromSemantics = false,
   BoxFit fit = BoxFit.contain,
@@ -63,7 +63,7 @@ Widget svgFromMemory(
 
 Widget svgFromNetwork(
   String url, {
-  alignment = Alignment.center,
+  Alignment alignment =  Alignment.center,
   Color? color,
   bool excludeFromSemantics = false,
   BoxFit fit = BoxFit.contain,
@@ -92,7 +92,7 @@ Widget svgFromNetwork(
 
 Widget svgFromString(
   String string, {
-  alignment = Alignment.center,
+  Alignment alignment =  Alignment.center,
   Color? color,
   bool excludeFromSemantics = false,
   BoxFit fit = BoxFit.contain,

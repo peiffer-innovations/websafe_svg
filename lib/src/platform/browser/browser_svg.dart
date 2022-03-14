@@ -111,7 +111,7 @@ class _BrowserSvgState extends State<BrowserSvg> {
               : Container(
                   height: widget.height,
                   width: widget.width,
-                  alignment: Alignment.center,
+                  alignment: widget.alignment,
                   child: Image.network(
                     _image!,
                     color: widget.color,
