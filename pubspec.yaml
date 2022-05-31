@@ -1,27 +1,27 @@
-name: websafe_svg
-description: Simple abstraction to be able to use SVGs in Android, iOS, and Web.
-version: 2.1.1
-homepage: https://github.com/peiffer-innovations/websafe_svg
-environment:
+name: 'websafe_svg'
+description: 'Simple abstraction to be able to use SVGs in Android, iOS, and Web.'
+version: '2.1.1+1'
+homepage: 'https://github.com/peiffer-innovations/websafe_svg'
+
+environment: 
   sdk: '>=2.17.0 <3.0.0'
   flutter: '>=2.0.0'
 
-dependencies:
-  convert: ^3.0.1
-  flutter:
-    sdk: flutter
-  flutter_svg: ^1.0.3
-  http: ^0.13.4
-  logging: ^1.0.1
-  meta: ^1.7.0
+dependencies: 
+  convert: '^3.0.2'
+  flutter: 
+    sdk: 'flutter'
+  flutter_svg: '^1.1.0'
+  http: '^0.13.4'
+  logging: '^1.0.2'
+  meta: '^1.7.0'
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
+dev_dependencies: 
+  flutter_test: 
+    sdk: 'flutter'
 
-ignore_updates:
-  # Ignoring everything in flutter_test as those are all point-in-time entries
-  # can't upgrade without upgrading Flutter itself.
+
+ignore_updates: 
   - 'async'
   - 'boolean_selector'
   - 'characters'
