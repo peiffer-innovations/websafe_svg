@@ -3,13 +3,16 @@ name: Flutter Publisher
 on:
   push:
     branches: [main]
+    paths:
+      - .github/workflows/publisher.yml
+      - pubspec.yaml
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Validate
         uses: peiffer-innovations/actions-flutter-validate@v1.1.2
         with:

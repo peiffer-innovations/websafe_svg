@@ -1,3 +1,14 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [websafe_svg](#websafe_svg)
+  - [Using the library](#using-the-library)
+  - [Supports](#supports)
+  - [Example](#example)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # websafe_svg
 
 ![Dart Publisher](https://github.com/peiffer-innovations/websafe_svg/workflows/Dart%20Publisher/badge.svg)
