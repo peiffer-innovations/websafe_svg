@@ -1,3 +1,9 @@
+## [2.1.2] - May, 31, 2022
+
+* Fix for [https://github.com/peiffer-innovations/websafe_svg/pull/23]
+    * Thanks to [danielkono](https://github.com/danielkono)
+
+
 ## [2.1.1+1] - May, 31, 2022
 
 * Automated dependency updates
