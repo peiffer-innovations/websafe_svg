@@ -5,7 +5,7 @@ import 'package:flutter_svg/svg.dart';
 
 Widget svgFromAsset(
   String asset, {
-  alignment = Alignment.center,
+  Alignment alignment = Alignment.center,
   Color? color,
   bool excludeFromSemantics = false,
   BoxFit fit = BoxFit.contain,
@@ -18,7 +18,7 @@ Widget svgFromAsset(
 }) =>
     SvgPicture.asset(
       asset,
-      alignment: Alignment.center,
+      alignment: alignment,
       color: color,
       excludeFromSemantics: excludeFromSemantics,
       fit: fit,
@@ -31,7 +31,7 @@ Widget svgFromAsset(
 
 Widget svgFromMemory(
   Uint8List bytes, {
-  alignment = Alignment.center,
+  Alignment alignment = Alignment.center,
   Color? color,
   bool excludeFromSemantics = false,
   BoxFit fit = BoxFit.contain,
@@ -43,7 +43,7 @@ Widget svgFromMemory(
 }) =>
     SvgPicture.memory(
       bytes,
-      alignment: Alignment.center,
+      alignment: alignment,
       color: color,
       excludeFromSemantics: excludeFromSemantics,
       fit: fit,
@@ -56,7 +56,7 @@ Widget svgFromMemory(
 
 Widget svgFromNetwork(
   String url, {
-  alignment = Alignment.center,
+  Alignment alignment = Alignment.center,
   Color? color,
   bool excludeFromSemantics = false,
   BoxFit fit = BoxFit.contain,
@@ -83,7 +83,7 @@ Widget svgFromNetwork(
 
 Widget svgFromString(
   String bytes, {
-  alignment = Alignment.center,
+  Alignment alignment = Alignment.center,
   Color? color,
   bool excludeFromSemantics = false,
   BoxFit fit = BoxFit.contain,
@@ -95,7 +95,7 @@ Widget svgFromString(
 }) =>
     SvgPicture.string(
       bytes,
-      alignment: Alignment.center,
+      alignment: alignment,
       color: color,
       excludeFromSemantics: excludeFromSemantics,
       fit: fit,

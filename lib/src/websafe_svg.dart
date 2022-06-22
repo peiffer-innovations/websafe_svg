@@ -12,7 +12,7 @@ import 'platform/stub_svg.dart'
 class WebsafeSvg {
   static Widget asset(
     String asset, {
-    alignment = Alignment.center,
+    Alignment alignment = Alignment.center,
     Color? color,
     BoxFit fit = BoxFit.contain,
     double? height,
@@ -35,7 +35,7 @@ class WebsafeSvg {
 
   static Widget memory(
     Uint8List bytes, {
-    alignment = Alignment.center,
+    Alignment alignment = Alignment.center,
     Color? color,
     BoxFit fit = BoxFit.contain,
     double? height,
@@ -56,7 +56,7 @@ class WebsafeSvg {
 
   static Widget network(
     String url, {
-    alignment = Alignment.center,
+    Alignment alignment = Alignment.center,
     Color? color,
     BoxFit fit = BoxFit.contain,
     Map<String, String>? headers,
@@ -79,7 +79,7 @@ class WebsafeSvg {
 
   static Widget string(
     String bytes, {
-    alignment = Alignment.center,
+    Alignment alignment = Alignment.center,
     Color? color,
     BoxFit fit = BoxFit.contain,
     double? height,
