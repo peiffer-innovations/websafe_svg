@@ -1,3 +1,8 @@
+## [2.1.2+1] - July 5, 2022
+
+* Automated dependency updates
+
+
 ## [2.1.2] - May, 31, 2022
 
 * Fix for [https://github.com/peiffer-innovations/websafe_svg/pull/23]
@@ -101,4 +106,5 @@
 ## [1.0.0] - April 27th, 2020
 
 * Initial release
+
 
