@@ -32,7 +32,7 @@ class _AnimationPageState extends State<AnimationPage>
 
     controller.repeat(
       reverse: true,
-      period: Duration(
+      period: const Duration(
         milliseconds: 1000,
       ),
     );
@@ -49,16 +49,16 @@ class _AnimationPageState extends State<AnimationPage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Animation'),
+        title: const Text('Animation'),
       ),
       body: Center(
         child: AnimatedBuilder(
           animation: colorAnimation,
           builder: (context, w) {
             return Container(
-              color: Color(0xffa0a0a0),
-              margin: EdgeInsets.all(124),
-              padding: EdgeInsets.all(20.0),
+              color: const Color(0xffa0a0a0),
+              margin: const EdgeInsets.all(124),
+              padding: const EdgeInsets.all(20.0),
               child: WebsafeSvg.asset(
                 'assets/svgs/angry.svg',
                 color: colorAnimation.value,

@@ -13,7 +13,7 @@ class SvgPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('SVG'),
+        title: const Text('SVG'),
       ),
       body: Center(
         child: SizedBox(

@@ -25,7 +25,7 @@ class BrowserSvgNetworkLoader implements BrowserSvgLoader {
 
   @override
   Future<String> load() async {
-    var response = await http.get(Uri.parse(url), headers: headers);
+    final response = await http.get(Uri.parse(url), headers: headers);
 
     return utf8.decode(response.bodyBytes);
   }

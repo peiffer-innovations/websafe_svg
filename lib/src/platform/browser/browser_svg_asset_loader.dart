@@ -23,7 +23,7 @@ class BrowserSvgAssetLoader implements BrowserSvgLoader {
 
   @override
   Future<String> load() async {
-    var data = await rootBundle.loadString(
+    final data = await rootBundle.loadString(
       package == null ? asset : 'packages/$package/$asset',
     );
 

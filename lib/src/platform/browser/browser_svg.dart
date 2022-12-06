@@ -68,14 +68,14 @@ class _BrowserSvgState extends State<BrowserSvg> {
       setState(() {});
     }
     _loadIndex++;
-    var idx = _loadIndex;
+    final idx = _loadIndex;
 
     try {
       var image = await _loader.load();
 
       if (idx == _loadIndex) {
         _imageBytes = Uint8List.fromList(utf8.encode(image));
-        var b64 = base64.encode(_imageBytes!.toList());
+        final b64 = base64.encode(_imageBytes!.toList());
         image = 'data:image/svg+xml;base64,$b64';
 
         _image = image;
@@ -91,13 +91,13 @@ class _BrowserSvgState extends State<BrowserSvg> {
 
   Widget _buildPlaceholder(BuildContext context) =>
       widget.placeholderBuilder == null
-          ? SizedBox()
+          ? const SizedBox()
           : Builder(builder: widget.placeholderBuilder!);
 
   @override
   Widget build(BuildContext context) {
     return AnimatedSwitcher(
-      duration: Duration(milliseconds: 100),
+      duration: const Duration(milliseconds: 100),
       child: _image == null
           ? _buildPlaceholder(context)
           : rendererCanvasKit

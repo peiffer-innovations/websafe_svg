@@ -25,10 +25,10 @@ class _MemorySvgPageState extends State<MemorySvgPage> {
   }
 
   Future<void> _initialize() async {
-    var data = await rootBundle.loadString('assets/all.json');
-    var all = json.decode(data);
+    final data = await rootBundle.loadString('assets/all.json');
+    final all = json.decode(data);
 
-    var svgs = <_SvgImage>[];
+    final svgs = <_SvgImage>[];
     for (var i in all) {
       svgs.add(
         _SvgImage(
@@ -50,20 +50,20 @@ class _MemorySvgPageState extends State<MemorySvgPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Memory'),
+        title: const Text('Memory'),
       ),
       body: _svgs == null
-          ? Center(
+          ? const Center(
               child: CircularProgressIndicator(),
             )
           : ListView.builder(
               itemCount: _svgs.length,
               itemBuilder: (BuildContext context, int index) => Padding(
-                padding: EdgeInsets.only(bottom: 8.0),
+                padding: const EdgeInsets.only(bottom: 8.0),
                 child: ListTile(
                   leading: Material(
                     borderRadius: BorderRadius.circular(30.0),
-                    color: Color(0xffa0a0a0),
+                    color: const Color(0xffa0a0a0),
                     elevation: 2.0,
                     child: Container(
                       alignment: Alignment.center,

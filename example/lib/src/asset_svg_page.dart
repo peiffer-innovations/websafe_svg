@@ -25,10 +25,10 @@ class _AssetSvgPageState extends State<AssetSvgPage> {
   }
 
   Future<void> _initialize() async {
-    var data = await rootBundle.loadString('assets/all.json');
-    var all = json.decode(data);
+    final data = await rootBundle.loadString('assets/all.json');
+    final all = json.decode(data);
 
-    var svgs = <String>[];
+    final svgs = <String>[];
     for (var i in all) {
       svgs.add(i?.toString());
     }
@@ -43,20 +43,20 @@ class _AssetSvgPageState extends State<AssetSvgPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Assets'),
+        title: const Text('Assets'),
       ),
       body: _svgs == null
-          ? Center(
+          ? const Center(
               child: CircularProgressIndicator(),
             )
           : ListView.builder(
               itemCount: _svgs.length,
               itemBuilder: (BuildContext context, int index) => Padding(
-                padding: EdgeInsets.only(bottom: 8.0),
+                padding: const EdgeInsets.only(bottom: 8.0),
                 child: ListTile(
                   leading: Material(
                     borderRadius: BorderRadius.circular(30.0),
-                    color: Color(0xffa0a0a0),
+                    color: const Color(0xffa0a0a0),
                     elevation: 2.0,
                     child: Container(
                       alignment: Alignment.center,

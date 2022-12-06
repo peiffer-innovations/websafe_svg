@@ -31,7 +31,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('WebsafeSvg Example'),
+        title: const Text('WebsafeSvg Example'),
       ),
       body: ListView(
         children: [
@@ -41,7 +41,7 @@ class MyHomePage extends StatelessWidget {
                 builder: (BuildContext context) => AnimationPage(),
               ),
             ),
-            title: Text('Animation'),
+            title: const Text('Animation'),
           ),
           ListTile(
             onTap: () => Navigator.of(context).push(
@@ -49,7 +49,7 @@ class MyHomePage extends StatelessWidget {
                 builder: (BuildContext context) => AssetSvgPage(),
               ),
             ),
-            title: Text('Assets'),
+            title: const Text('Assets'),
           ),
           ListTile(
             onTap: () => Navigator.of(context).push(
@@ -57,7 +57,7 @@ class MyHomePage extends StatelessWidget {
                 builder: (BuildContext context) => MemorySvgPage(),
               ),
             ),
-            title: Text('Memory'),
+            title: const Text('Memory'),
           ),
           ListTile(
             onTap: () => Navigator.of(context).push(
@@ -65,7 +65,7 @@ class MyHomePage extends StatelessWidget {
                 builder: (BuildContext context) => NetworkSvgPage(),
               ),
             ),
-            title: Text('Network'),
+            title: const Text('Network'),
           ),
           ListTile(
             onTap: () => Navigator.of(context).push(
@@ -73,7 +73,7 @@ class MyHomePage extends StatelessWidget {
                 builder: (BuildContext context) => StringSvgPage(),
               ),
             ),
-            title: Text('String'),
+            title: const Text('String'),
           ),
         ],
       ),
