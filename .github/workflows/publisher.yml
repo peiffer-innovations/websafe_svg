@@ -15,8 +15,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Validate
         uses: peiffer-innovations/actions-flutter-validate@v1
-        with:
-          flutter_package: true
+
       - name: Publish
         uses: peiffer-innovations/actions-pub-publish@v1.0.1
         with:
