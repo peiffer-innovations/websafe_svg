@@ -6,16 +6,14 @@ import 'package:websafe_svg/websafe_svg.dart';
 import 'package:websafe_svg_example/src/svg_page.dart';
 
 class AssetSvgPage extends StatefulWidget {
-  AssetSvgPage({
-    Key key,
-  }) : super(key: key);
+  AssetSvgPage({super.key});
 
   @override
   _AssetSvgPageState createState() => _AssetSvgPageState();
 }
 
 class _AssetSvgPageState extends State<AssetSvgPage> {
-  List<String> _svgs;
+  List<String> _svgs = [];
 
   @override
   void initState() {
@@ -30,7 +28,7 @@ class _AssetSvgPageState extends State<AssetSvgPage> {
 
     final svgs = <String>[];
     for (var i in all) {
-      svgs.add(i?.toString());
+      svgs.add(i?.toString() ?? '');
     }
     _svgs = svgs;
 
@@ -45,7 +43,7 @@ class _AssetSvgPageState extends State<AssetSvgPage> {
       appBar: AppBar(
         title: const Text('Assets'),
       ),
-      body: _svgs == null
+      body: _svgs.isEmpty
           ? const Center(
               child: CircularProgressIndicator(),
             )

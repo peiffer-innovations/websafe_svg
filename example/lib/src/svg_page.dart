@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 
 class SvgPage extends StatelessWidget {
   SvgPage({
-    @required this.child,
-    Key key,
-  })  : assert(child != null),
-        super(key: key);
+    super.key,
+    required this.child,
+  });
 
   final Widget child;
 

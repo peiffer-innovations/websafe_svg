@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
 class AnimationPage extends StatefulWidget {
-  AnimationPage({
-    Key key,
-  }) : super(key: key);
+  AnimationPage({super.key});
 
   @override
   _AnimationPageState createState() => _AnimationPageState();
@@ -12,9 +10,9 @@ class AnimationPage extends StatefulWidget {
 
 class _AnimationPageState extends State<AnimationPage>
     with SingleTickerProviderStateMixin {
-  Color color;
-  Animation<Color> colorAnimation;
-  AnimationController controller;
+  late Color color;
+  late Animation<Color?> colorAnimation;
+  late AnimationController controller;
 
   @override
   void initState() {

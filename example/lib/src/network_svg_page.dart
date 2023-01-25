@@ -7,15 +7,15 @@ import 'package:websafe_svg_example/src/svg_page.dart';
 
 class NetworkSvgPage extends StatefulWidget {
   NetworkSvgPage({
-    Key key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   _NetworkSvgPageState createState() => _NetworkSvgPageState();
 }
 
 class _NetworkSvgPageState extends State<NetworkSvgPage> {
-  List<String> _svgs;
+  List<String> _svgs = [];
 
   @override
   void initState() {
@@ -30,7 +30,7 @@ class _NetworkSvgPageState extends State<NetworkSvgPage> {
 
     final svgs = <String>[];
     for (var i in all) {
-      svgs.add(i?.toString());
+      svgs.add(i?.toString() ?? '');
     }
     _svgs = svgs;
 
@@ -45,7 +45,7 @@ class _NetworkSvgPageState extends State<NetworkSvgPage> {
       appBar: AppBar(
         title: const Text('Network'),
       ),
-      body: _svgs == null
+      body: _svgs.isEmpty
           ? const Center(
               child: CircularProgressIndicator(),
             )

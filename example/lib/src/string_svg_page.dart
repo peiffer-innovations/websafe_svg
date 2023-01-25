@@ -7,15 +7,15 @@ import 'package:websafe_svg_example/src/svg_page.dart';
 
 class StringSvgPage extends StatefulWidget {
   StringSvgPage({
-    Key key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   _StringSvgPageState createState() => _StringSvgPageState();
 }
 
 class _StringSvgPageState extends State<StringSvgPage> {
-  List<_SvgImage> _svgs;
+  List<_SvgImage> _svgs = [];
 
   @override
   void initState() {
@@ -33,7 +33,7 @@ class _StringSvgPageState extends State<StringSvgPage> {
       svgs.add(
         _SvgImage(
           image: await rootBundle.loadString('assets/svgs/$i'),
-          name: i?.toString(),
+          name: i?.toString() ?? '',
         ),
       );
     }
@@ -50,7 +50,7 @@ class _StringSvgPageState extends State<StringSvgPage> {
       appBar: AppBar(
         title: const Text('String'),
       ),
-      body: _svgs == null
+      body: _svgs.isEmpty
           ? const Center(
               child: CircularProgressIndicator(),
             )
@@ -101,8 +101,8 @@ class _StringSvgPageState extends State<StringSvgPage> {
 @immutable
 class _SvgImage {
   _SvgImage({
-    @required this.image,
-    @required this.name,
+    required this.image,
+    required this.name,
   });
 
   final String image;

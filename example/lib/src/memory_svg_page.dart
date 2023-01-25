@@ -7,15 +7,15 @@ import 'package:websafe_svg_example/src/svg_page.dart';
 
 class MemorySvgPage extends StatefulWidget {
   MemorySvgPage({
-    Key key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   _MemorySvgPageState createState() => _MemorySvgPageState();
 }
 
 class _MemorySvgPageState extends State<MemorySvgPage> {
-  List<_SvgImage> _svgs;
+  List<_SvgImage> _svgs = [];
 
   @override
   void initState() {
@@ -32,10 +32,12 @@ class _MemorySvgPageState extends State<MemorySvgPage> {
     for (var i in all) {
       svgs.add(
         _SvgImage(
-          image: utf8.encode(
-            await rootBundle.loadString('assets/svgs/$i'),
+          image: Uint8List.fromList(
+            utf8.encode(
+              await rootBundle.loadString('assets/svgs/$i'),
+            ),
           ),
-          name: i?.toString(),
+          name: i?.toString() ?? '',
         ),
       );
     }
@@ -52,7 +54,7 @@ class _MemorySvgPageState extends State<MemorySvgPage> {
       appBar: AppBar(
         title: const Text('Memory'),
       ),
-      body: _svgs == null
+      body: _svgs.isEmpty
           ? const Center(
               child: CircularProgressIndicator(),
             )
@@ -103,8 +105,8 @@ class _MemorySvgPageState extends State<MemorySvgPage> {
 @immutable
 class _SvgImage {
   _SvgImage({
-    @required this.image,
-    @required this.name,
+    required this.image,
+    required this.name,
   });
 
   final Uint8List image;
