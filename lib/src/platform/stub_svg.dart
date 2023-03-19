@@ -33,7 +33,6 @@ Widget svgFromMemory(
   double? height,
   Key? key,
   bool matchTextDirection = false,
-  String? package,
   WidgetBuilder? placeholderBuilder,
   String? semanticsLabel,
   SvgTheme theme = const SvgTheme(),

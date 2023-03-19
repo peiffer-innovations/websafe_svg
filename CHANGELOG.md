@@ -1,4 +1,4 @@
-## [3.0.0+1] - March 19th, 2023
+## [3.0.0+2] - March 19th, 2023
 
 * Updated to `flutter_svg` v2 and that had some breaking changes so rolling the major number.
 
