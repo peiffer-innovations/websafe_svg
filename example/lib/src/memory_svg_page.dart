@@ -86,7 +86,10 @@ class _MemorySvgPageState extends State<MemorySvgPage> {
                         ),
                         child: WebsafeSvg.memory(
                           _svgs[index].image,
-                          color: Colors.white,
+                          colorFilter: const ColorFilter.mode(
+                            Colors.white,
+                            BlendMode.srcIn,
+                          ),
                           fit: BoxFit.contain,
                           height: 30.0,
                           width: 30.0,

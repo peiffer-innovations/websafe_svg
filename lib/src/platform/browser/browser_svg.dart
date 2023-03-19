@@ -12,6 +12,7 @@ class BrowserSvg extends StatefulWidget {
     required this.alignment,
     this.allowDrawingOutsideViewBox = false,
     this.clipBehavior = Clip.hardEdge,
+    this.colorFilter,
     required this.excludeFromSemantics,
     required this.fit,
     required this.height,
@@ -27,6 +28,7 @@ class BrowserSvg extends StatefulWidget {
   final Alignment alignment;
   final bool allowDrawingOutsideViewBox;
   final Clip clipBehavior;
+  final ColorFilter? colorFilter;
   final bool excludeFromSemantics;
   final BoxFit fit;
   final double? height;
@@ -102,6 +104,7 @@ class _BrowserSvgState extends State<BrowserSvg> {
 
   @override
   Widget build(BuildContext context) {
+    final colorFilter = widget.colorFilter;
     return AnimatedSwitcher(
       duration: const Duration(milliseconds: 100),
       child: _image == null
@@ -112,6 +115,7 @@ class _BrowserSvgState extends State<BrowserSvg> {
                   alignment: widget.alignment,
                   allowDrawingOutsideViewBox: widget.allowDrawingOutsideViewBox,
                   clipBehavior: widget.clipBehavior,
+                  colorFilter: widget.colorFilter,
                   fit: widget.fit,
                   height: widget.height,
                   matchTextDirection: widget.matchTextDirection,
@@ -123,14 +127,26 @@ class _BrowserSvgState extends State<BrowserSvg> {
                   height: widget.height,
                   width: widget.width,
                   alignment: widget.alignment,
-                  child: Image.network(
-                    _image!,
-                    alignment: widget.alignment,
-                    color: widget.theme?.currentColor,
-                    height: widget.height,
-                    fit: widget.fit,
-                    width: widget.width,
-                  ),
+                  child: colorFilter == null
+                      ? Image.network(
+                          _image!,
+                          alignment: widget.alignment,
+                          height: widget.height,
+                          fit: widget.fit,
+                          semanticLabel: widget.semanticsLabel,
+                          width: widget.width,
+                        )
+                      : ColorFiltered(
+                          colorFilter: colorFilter,
+                          child: Image.network(
+                            _image!,
+                            alignment: widget.alignment,
+                            height: widget.height,
+                            fit: widget.fit,
+                            semanticLabel: widget.semanticsLabel,
+                            width: widget.width,
+                          ),
+                        ),
                 ),
     );
   }

@@ -75,7 +75,10 @@ class _AssetSvgPageState extends State<AssetSvgPage> {
                         ),
                         child: WebsafeSvg.asset(
                           'assets/svgs/${_svgs[index]}',
-                          color: Colors.white,
+                          colorFilter: const ColorFilter.mode(
+                            Colors.white,
+                            BlendMode.srcIn,
+                          ),
                           fit: BoxFit.contain,
                           height: 30.0,
                           width: 30.0,

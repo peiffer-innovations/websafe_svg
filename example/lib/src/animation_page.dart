@@ -53,13 +53,17 @@ class _AnimationPageState extends State<AnimationPage>
         child: AnimatedBuilder(
           animation: colorAnimation,
           builder: (context, w) {
+            final color = colorAnimation.value;
             return Container(
               color: const Color(0xffa0a0a0),
               margin: const EdgeInsets.all(124),
               padding: const EdgeInsets.all(20.0),
               child: WebsafeSvg.asset(
                 'assets/svgs/angry.svg',
-                color: colorAnimation.value,
+                colorFilter: ColorFilter.mode(
+                  color ?? Colors.black,
+                  BlendMode.srcIn,
+                ),
                 height: 100.0,
                 width: 100.0,
               ),

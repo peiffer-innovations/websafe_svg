@@ -77,7 +77,10 @@ class _NetworkSvgPageState extends State<NetworkSvgPage> {
                         ),
                         child: WebsafeSvg.network(
                           'https://raw.githubusercontent.com/peiffer-innovations/websafe_svg/main/example/assets-src/svgs/${_svgs[index]}',
-                          color: Colors.white,
+                          colorFilter: const ColorFilter.mode(
+                            Colors.white,
+                            BlendMode.srcIn,
+                          ),
                           fit: BoxFit.contain,
                           height: 30.0,
                           width: 30.0,

@@ -82,7 +82,10 @@ class _StringSvgPageState extends State<StringSvgPage> {
                         ),
                         child: WebsafeSvg.string(
                           _svgs[index].image,
-                          color: Colors.white,
+                          colorFilter: const ColorFilter.mode(
+                            Colors.white,
+                            BlendMode.srcIn,
+                          ),
                           fit: BoxFit.contain,
                           height: 30.0,
                           width: 30.0,
