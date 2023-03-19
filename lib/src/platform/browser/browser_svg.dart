@@ -10,25 +10,31 @@ import 'package:websafe_svg/src/platform/browser/browser_svg_loader.dart';
 class BrowserSvg extends StatefulWidget {
   BrowserSvg({
     required this.alignment,
-    this.color,
+    this.allowDrawingOutsideViewBox = false,
+    this.clipBehavior = Clip.hardEdge,
     required this.excludeFromSemantics,
     required this.fit,
     required this.height,
     Key? key,
     required this.loader,
+    this.matchTextDirection = false,
     required this.placeholderBuilder,
     required this.semanticsLabel,
+    this.theme,
     required this.width,
   }) : super(key: key);
 
   final Alignment alignment;
-  final Color? color;
+  final bool allowDrawingOutsideViewBox;
+  final Clip clipBehavior;
   final bool excludeFromSemantics;
   final BoxFit fit;
   final double? height;
   final BrowserSvgLoader loader;
+  final bool matchTextDirection;
   final WidgetBuilder? placeholderBuilder;
   final String? semanticsLabel;
+  final SvgTheme? theme;
   final double? width;
 
   @override
@@ -103,9 +109,14 @@ class _BrowserSvgState extends State<BrowserSvg> {
           : rendererCanvasKit
               ? SvgPicture.memory(
                   _imageBytes!,
-                  color: widget.color,
-                  height: widget.height,
+                  alignment: widget.alignment,
+                  allowDrawingOutsideViewBox: widget.allowDrawingOutsideViewBox,
+                  clipBehavior: widget.clipBehavior,
                   fit: widget.fit,
+                  height: widget.height,
+                  matchTextDirection: widget.matchTextDirection,
+                  semanticsLabel: widget.semanticsLabel,
+                  theme: widget.theme ?? const SvgTheme(),
                   width: widget.width,
                 )
               : Container(
@@ -114,7 +125,8 @@ class _BrowserSvgState extends State<BrowserSvg> {
                   alignment: widget.alignment,
                   child: Image.network(
                     _image!,
-                    color: widget.color,
+                    alignment: widget.alignment,
+                    color: widget.theme?.currentColor,
                     height: widget.height,
                     fit: widget.fit,
                     width: widget.width,
