@@ -1,3 +1,8 @@
+## [3.0.0+3] - March 21, 2023
+
+* Automated dependency updates
+
+
 ## [3.0.0+2] - March 19th, 2023
 
 * Updated to `flutter_svg` v2 and that had some breaking changes so rolling the major number.
@@ -151,6 +156,7 @@
 ## [1.0.0] - April 27th, 2020
 
 * Initial release
+
 
 
 
