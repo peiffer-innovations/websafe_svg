@@ -7,10 +7,12 @@ import 'src/network_svg_page.dart';
 import 'src/string_svg_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,13 +21,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
-  MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +40,7 @@ class MyHomePage extends StatelessWidget {
           ListTile(
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (BuildContext context) => AnimationPage(),
+                builder: (BuildContext context) => const AnimationPage(),
               ),
             ),
             title: const Text('Animation'),
@@ -46,7 +48,7 @@ class MyHomePage extends StatelessWidget {
           ListTile(
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (BuildContext context) => AssetSvgPage(),
+                builder: (BuildContext context) => const AssetSvgPage(),
               ),
             ),
             title: const Text('Assets'),
@@ -54,7 +56,7 @@ class MyHomePage extends StatelessWidget {
           ListTile(
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (BuildContext context) => MemorySvgPage(),
+                builder: (BuildContext context) => const MemorySvgPage(),
               ),
             ),
             title: const Text('Memory'),
@@ -62,7 +64,7 @@ class MyHomePage extends StatelessWidget {
           ListTile(
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (BuildContext context) => NetworkSvgPage(),
+                builder: (BuildContext context) => const NetworkSvgPage(),
               ),
             ),
             title: const Text('Network'),
@@ -70,7 +72,7 @@ class MyHomePage extends StatelessWidget {
           ListTile(
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (BuildContext context) => StringSvgPage(),
+                builder: (BuildContext context) => const StringSvgPage(),
               ),
             ),
             title: const Text('String'),

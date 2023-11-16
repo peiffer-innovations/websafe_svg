@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_web_libraries_in_flutter
+
 import 'dart:convert';
 import 'dart:js' as js;
 import 'dart:typed_data';
@@ -8,7 +10,7 @@ import 'package:logging/logging.dart';
 import 'package:websafe_svg/src/platform/browser/browser_svg_loader.dart';
 
 class BrowserSvg extends StatefulWidget {
-  BrowserSvg({
+  const BrowserSvg({
     required this.alignment,
     this.allowDrawingOutsideViewBox = false,
     this.clipBehavior = Clip.hardEdge,
@@ -16,14 +18,14 @@ class BrowserSvg extends StatefulWidget {
     required this.excludeFromSemantics,
     required this.fit,
     required this.height,
-    Key? key,
+    super.key,
     required this.loader,
     this.matchTextDirection = false,
     required this.placeholderBuilder,
     required this.semanticsLabel,
     this.theme,
     required this.width,
-  }) : super(key: key);
+  });
 
   final Alignment alignment;
   final bool allowDrawingOutsideViewBox;
@@ -40,7 +42,7 @@ class BrowserSvg extends StatefulWidget {
   final double? width;
 
   @override
-  _BrowserSvgState createState() => _BrowserSvgState();
+  State createState() => _BrowserSvgState();
 }
 
 class _BrowserSvgState extends State<BrowserSvg> {

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 
 class AnimationPage extends StatefulWidget {
-  AnimationPage({super.key});
+  const AnimationPage({super.key});
 
   @override
-  _AnimationPageState createState() => _AnimationPageState();
+  State createState() => _AnimationPageState();
 }
 
 class _AnimationPageState extends State<AnimationPage>

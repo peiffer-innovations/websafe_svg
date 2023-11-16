@@ -27,6 +27,6 @@ void main() async {
   }
 
   final out = File('assets/all.json');
-  final encoder = const JsonEncoder.withIndent('  ');
+  const encoder = JsonEncoder.withIndent('  ');
   out.writeAsStringSync(encoder.convert(all));
 }

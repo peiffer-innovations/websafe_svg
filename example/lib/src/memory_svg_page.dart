@@ -6,12 +6,12 @@ import 'package:websafe_svg/websafe_svg.dart';
 import 'package:websafe_svg_example/src/svg_page.dart';
 
 class MemorySvgPage extends StatefulWidget {
-  MemorySvgPage({
+  const MemorySvgPage({
     super.key,
   });
 
   @override
-  _MemorySvgPageState createState() => _MemorySvgPageState();
+  State createState() => _MemorySvgPageState();
 }
 
 class _MemorySvgPageState extends State<MemorySvgPage> {
@@ -107,7 +107,7 @@ class _MemorySvgPageState extends State<MemorySvgPage> {
 
 @immutable
 class _SvgImage {
-  _SvgImage({
+  const _SvgImage({
     required this.image,
     required this.name,
   });

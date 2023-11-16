@@ -4,7 +4,7 @@ import 'package:websafe_svg/src/platform/browser/browser_svg_loader.dart';
 
 @immutable
 class BrowserSvgAssetLoader implements BrowserSvgLoader {
-  BrowserSvgAssetLoader({
+  const BrowserSvgAssetLoader({
     required this.asset,
     this.package,
   });

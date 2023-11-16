@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SvgPage extends StatelessWidget {
-  SvgPage({
+  const SvgPage({
     super.key,
     required this.child,
   });

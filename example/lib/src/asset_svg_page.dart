@@ -6,10 +6,10 @@ import 'package:websafe_svg/websafe_svg.dart';
 import 'package:websafe_svg_example/src/svg_page.dart';
 
 class AssetSvgPage extends StatefulWidget {
-  AssetSvgPage({super.key});
+  const AssetSvgPage({super.key});
 
   @override
-  _AssetSvgPageState createState() => _AssetSvgPageState();
+  State createState() => _AssetSvgPageState();
 }
 
 class _AssetSvgPageState extends State<AssetSvgPage> {

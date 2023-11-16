@@ -6,7 +6,7 @@ import 'package:websafe_svg/src/platform/browser/browser_svg_loader.dart';
 
 @immutable
 class BrowserSvgNetworkLoader implements BrowserSvgLoader {
-  BrowserSvgNetworkLoader({
+  const BrowserSvgNetworkLoader({
     this.headers,
     required this.url,
   });

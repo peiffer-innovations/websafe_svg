@@ -6,12 +6,12 @@ import 'package:websafe_svg/websafe_svg.dart';
 import 'package:websafe_svg_example/src/svg_page.dart';
 
 class NetworkSvgPage extends StatefulWidget {
-  NetworkSvgPage({
+  const NetworkSvgPage({
     super.key,
   });
 
   @override
-  _NetworkSvgPageState createState() => _NetworkSvgPageState();
+  State createState() => _NetworkSvgPageState();
 }
 
 class _NetworkSvgPageState extends State<NetworkSvgPage> {

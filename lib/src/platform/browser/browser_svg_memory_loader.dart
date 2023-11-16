@@ -6,7 +6,7 @@ import 'package:websafe_svg/src/platform/browser/browser_svg_loader.dart';
 
 @immutable
 class BrowserSvgMemoryLoader implements BrowserSvgLoader {
-  BrowserSvgMemoryLoader({
+  const BrowserSvgMemoryLoader({
     required this.bytes,
   });
 
