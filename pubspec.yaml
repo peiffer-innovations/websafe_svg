@@ -3,24 +3,24 @@ description: 'Simple abstraction to be able to use SVGs in Android, iOS, and Web
 version: '3.0.1+1'
 homepage: 'https://github.com/peiffer-innovations/websafe_svg'
 
-environment: 
+environment:
   sdk: '>=3.0.0 <4.0.0'
 
-dependencies: 
-  convert: '^3.1.1'
-  flutter: 
+dependencies:
+  convert: '^3.1.5'
+  flutter:
     sdk: 'flutter'
-  flutter_svg: '^2.0.7'
+  flutter_svg: '^2.0.9'
   http: '^1.1.0'
   logging: '^1.2.0'
-  meta: '^1.9.1'
+  meta: '^1.10.0'
 
-dev_dependencies: 
-  flutter_test: 
+dev_dependencies:
+  flutter_lints: '^3.0.1'
+  flutter_test:
     sdk: 'flutter'
 
-
-ignore_updates: 
+ignore_updates:
   - 'archive'
   - 'async'
   - 'boolean_selector'
@@ -43,5 +43,6 @@ ignore_updates:
   - 'term_glyph'
   - 'test_api'
   - 'typed_data'
+  - 'uuid'
   - 'vector_math'
   - 'webdriver'
