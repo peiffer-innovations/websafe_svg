@@ -15,7 +15,7 @@ class BrowserSvgNetworkLoader implements BrowserSvgLoader {
   final String url;
 
   @override
-  bool operator ==(dynamic other) =>
+  bool operator ==(Object other) =>
       other is BrowserSvgNetworkLoader &&
       other.url == url &&
       other.headers == headers;

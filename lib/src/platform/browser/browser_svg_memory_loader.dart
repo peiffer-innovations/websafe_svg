@@ -13,7 +13,7 @@ class BrowserSvgMemoryLoader implements BrowserSvgLoader {
   final Uint8List bytes;
 
   @override
-  bool operator ==(dynamic other) =>
+  bool operator ==(Object other) =>
       other is BrowserSvgMemoryLoader && other.bytes == bytes;
 
   @override

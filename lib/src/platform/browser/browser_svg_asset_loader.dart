@@ -13,7 +13,7 @@ class BrowserSvgAssetLoader implements BrowserSvgLoader {
   final String? package;
 
   @override
-  bool operator ==(dynamic other) =>
+  bool operator ==(Object other) =>
       other is BrowserSvgAssetLoader &&
       other.asset == asset &&
       other.package == package;
