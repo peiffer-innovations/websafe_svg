@@ -1,55 +1,49 @@
-name: websafe_svg_example
-description: Example for the Websafe SVG
-version: 1.0.0
+name: 'websafe_svg_example'
+description: 'Example for the Websafe SVG'
+version: '1.0.0+1'
+publish_to: 'none'
 
-publish_to: none
-
-environment:
+environment: 
   sdk: '>=3.0.0 <4.0.0'
 
-dependencies:
-  flutter:
-    sdk: flutter
-  websafe_svg:
-    path: ../
+dependencies: 
+  flutter: 
+    sdk: 'flutter'
+  websafe_svg: 
+    path: '../'
 
-dev_dependencies:
-  flutter_lints: '^4.0.0'
-  flutter_test:
-    sdk: flutter
+dev_dependencies: 
+  flutter_lints: '^5.0.0'
+  flutter_test: 
+    sdk: 'flutter'
 
-flutter:
+flutter: 
   uses-material-design: true
-  assets:
-    - assets/all.json
-    - assets/svgs/
+  assets: 
+    - 'assets/all.json'
+    - 'assets/svgs/'
 
-permittedLicenses:
-  - Apache-2.0
-  - BSD-2-Clause
-  - BSD-3-Clause
-  - MIT
-  - MIT-Modern-Variant
-  - MPL-2.0
-  - Zlib
+permittedLicenses: 
+  - 'Apache-2.0'
+  - 'BSD-2-Clause'
+  - 'BSD-3-Clause'
+  - 'MIT'
+  - 'MIT-Modern-Variant'
+  - 'MPL-2.0'
+  - 'Zlib'
 
-# The [license_checker](https://pub.dev/packages/license_checker) package cannot
-# detect the built in Flutter packages because they aren't published to pub.dev
-# and do not have a LICENSE file in their respective folders.  So this section
-# informs the license_checker that all the built in Flutter packages all have
-# the same BSD-3-Clause license as Flutter itself. 
 packageLicenseOverride: 
-  flutter: BSD-3-Clause
-  flutter_driver: BSD-3-Clause
-  flutter_goldens: BSD-3-Clause
-  flutter_localizations: BSD-3-Clause
-  flutter_web_plugins: BSD-3-Clause
-  flutter_test: BSD-3-Clause
-  fuchsia_remote_debug_protocol: BSD-3-Clause
-  integration_test: BSD-3-Clause
-  rxdart: Apache-2.0
+  flutter: 'BSD-3-Clause'
+  flutter_driver: 'BSD-3-Clause'
+  flutter_goldens: 'BSD-3-Clause'
+  flutter_localizations: 'BSD-3-Clause'
+  flutter_web_plugins: 'BSD-3-Clause'
+  flutter_test: 'BSD-3-Clause'
+  fuchsia_remote_debug_protocol: 'BSD-3-Clause'
+  integration_test: 'BSD-3-Clause'
+  rxdart: 'Apache-2.0'
 
-ignore_updates:
+ignore_updates: 
   - 'archive'
   - 'async'
   - 'boolean_selector'
